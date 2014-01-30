@@ -1,9 +1,9 @@
-var app = angular.module('pingApp', ['ngRoute'])
+var app = angular.module('pingApp', ['ngRoute', 'pingpongControllers', 'pingpongServices'])
 
-app.controller('PingCtrl', function($scope, Data){
-	$scope.message = { gameOdd: Data };
-})
+// app.controller('PingCtrl', function($scope, Data){
+// 	$scope.message = { gameOdd: Data };
+// })
 
-app.factory('Data', function(){
-	return false;
-})
+// app.factory('Data', function(){
+// 	return false;
+// })
