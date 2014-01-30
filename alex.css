@@ -1,0 +1,28 @@
+.player1, .player2 {
+			width: 50%;
+			height: 90%;
+			font-family: Helvetica;
+			font-weight: bold;
+			font-size: 300px;
+			color: white;
+			text-align: center;
+			padding-top: 10%;
+		}
+
+		.player1 {
+			background: red;
+			float: left;
+		}
+
+		.player2 {
+			background: blue;
+			float: right;
+		}
+
+		.flipped .player1 {
+			float: right;
+		}
+
+		.flipped .player2 {
+			float: left;
+		}
