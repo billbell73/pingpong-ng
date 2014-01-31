@@ -1,71 +1,67 @@
 .player1, .player2 {
-			width: 50%;
-			height: 90%;
-			color: white;
-			text-align: center;
-			padding-top: 10%;
-			cursor: pointer;
-    	position: relative;
-		}
+	width: 50%;
+	height: 90%;
+	color: #FCFFE3;
+	font-family: Helvetica;
+	text-align: center;
+	padding-top: 10%;
+	position: relative;
+}
 
-		.player1 {
-			background: #5bd3ad;
-			float: left;
-		}
+.player1 {
+	background: #5bd3ad;
+	float: left;
+}
 
-		#p1-name {
-      font-size: 4vw;
-    }
+.player2 {
+	background: #6192F2;
+	float: right;
+}
 
-    #p1-points {
-      font-size: 25vw;
-      color: #FCFFE3;
-    }
+#p1-name, #p2-name {
+  font-size: 4vw;
+}
 
-    #p1-games {
-      position: absolute;
-      left: 80%;
-      top: 7%;
-      font-size: 6vw;
-      color: #FCFFE3;
-    }
+#p1-points, #p2-points {
+  font-size: 25vw;
+  cursor: pointer;
+}
 
-		.player2 {
-			background: #6192F2;
-			float: right;
-		}
+#p1-games, #p2-games {
+  position: absolute;
+  top: 7%;
+  font-size: 6vw;
+}
 
-		#p2-name {
-      font-size: 4vw;
-    }
+#p1-games {
+  left: 80%;
+}
 
-    #p2-points {
-      font-size: 25vw;
-      color: #FCFFE3;
-    }
+#p2-games {
+  left: 12.5%;
+}
 
-    #p2-games {
-      position: absolute;
-      left: 12.5%;
-      top: 7%;
-      font-size: 6vw;
-      color: #FCFFE3;
-    }
+.p1-back, .p2-back {
+	padding-top: 3%;
+	padding-bottom: 7%;
+	font-size: 3vw;
+	cursor: pointer;
+}
 
-		.flipped .player1 {
-			float: right;
-		}
+.flipped .player1 {
+	float: right;
+}
 
-		.flipped .player2 {
-			float: left;
-		}
+.flipped .player2 {
+	float: left;
+}
 
-		.flipped #p1-games {
-    left: 12.5%;;
-  	}
+.flipped #p1-games {
+	left: 12.5%;;
+}
 
-  	.flipped #p2-games {
-    left: 80%;
-  	}
+.flipped #p2-games {
+	left: 80%;
+}
 
 
