@@ -11,8 +11,7 @@ pingpongControllers.controller('ScorerCtrl', ['$scope', 'Data',
 			$scope.p1games = data[0].p1games;
 			$scope.p2games = data[0].p2games;
 			$scope.server = data[0].server;
-			console.log(data[0]);
-			console.log(data[0].p1points);
+			$scope.gameOdd = data[0].gameOdd;
 	 	})
 
 	}

@@ -3,6 +3,7 @@
     "p2points": 3,
     "p1games": 0,
     "p2games": 1,
-    "serving": 0
+    "serving": 0,
+    "gameOdd": false
   }
 ]

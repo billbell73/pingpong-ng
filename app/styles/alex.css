@@ -1,23 +1,56 @@
 .player1, .player2 {
 			width: 50%;
 			height: 90%;
-			font-family: Helvetica;
-			font-weight: bold;
-			font-size: 300px;
 			color: white;
 			text-align: center;
 			padding-top: 10%;
+			cursor: pointer;
+    	position: relative;
 		}
 
 		.player1 {
-			background: red;
+			background: #5bd3ad;
 			float: left;
 		}
 
+		#p1-name {
+      font-size: 4vw;
+    }
+
+    #p1-points {
+      font-size: 25vw;
+      color: #FCFFE3;
+    }
+
+    #p1-games {
+      position: absolute;
+      left: 80%;
+      top: 7%;
+      font-size: 6vw;
+      color: #FCFFE3;
+    }
+
 		.player2 {
-			background: blue;
+			background: #6192F2;
 			float: right;
 		}
+
+		#p2-name {
+      font-size: 4vw;
+    }
+
+    #p2-points {
+      font-size: 25vw;
+      color: #FCFFE3;
+    }
+
+    #p2-games {
+      position: absolute;
+      left: 12.5%;
+      top: 7%;
+      font-size: 6vw;
+      color: #FCFFE3;
+    }
 
 		.flipped .player1 {
 			float: right;
@@ -26,3 +59,13 @@
 		.flipped .player2 {
 			float: left;
 		}
+
+		.flipped #p1-games {
+    left: 12.5%;;
+  	}
+
+  	.flipped #p2-games {
+    left: 80%;
+  	}
+
+

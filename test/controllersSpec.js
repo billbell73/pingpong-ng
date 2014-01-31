@@ -23,8 +23,9 @@ describe('pingApp controllers', function() {
           respond([{"p1points": 5, 
                     "p2points": 3,
                     "p1games": 0,
-                    p2games: 1,
-                    "serving": 0
+                    "p2games": 1,
+                    "serving": 0,
+                    "gameOdd": false
                   }]);
  
       scope = $rootScope.$new();
@@ -40,7 +41,8 @@ describe('pingApp controllers', function() {
                                         "p2points": 3,
                                         "p1games": 0,
                                         "p2games": 1,
-                                        "serving": 0
+                                        "serving": 0,
+                                        "gameOdd": false
                                       });
     });
  
