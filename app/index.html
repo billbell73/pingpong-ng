@@ -11,12 +11,11 @@
 	<div ng-controller="ScorerCtrl">
 		<div class='board' ng-class="{ flipped: message.gameOdd }">
 			<div class='player1'>
-				0
-				{{message.gameOdd}}
+				{{score.p1points}}
 			</div> 
 		
 			<div class='player2'>
-				3
+				{{score.p2points}}
 			</div>
 		</div>
 	</div>

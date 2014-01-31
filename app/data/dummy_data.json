@@ -1,6 +1,8 @@
 [
-	{
-	"flipped": true,
-	"hello": 2
-	}
+	{ "p1points": 4, 
+    "p2points": 3,
+    "p1games": 0,
+    "p2games": 1,
+    "serving": 0
+  }
 ]
