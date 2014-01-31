@@ -1,19 +1,22 @@
-var pingpongServices = angular.module('pingpongServices', []);
+var pingpongServices = angular.module('pingpongServices', ['ngResource']);
 
-pingpongServices.factory('Data', ['$http', '$timeout',
-    function($http, $timeout) {
-    	var testData = [];
-		  $http.get('data/dummy_data.json').success(function(data) {
-		    testData.push(data[0].flipped);
-		  });
-
-		  return $timeout(function () {
-        console.log(testData);
-      }, 40);
-		}
+pingpongServices.factory('Data', ['$resource',
+    function($resource){
+    	return $resource('data/dummy_data.json', {}, {
+      	query: {method:'GET', {},  isArray:true }
+    	})
+    }
 ]);
 
-// function($http, $q) {
+
+// phonecatServices.factory('Phone', ['$resource',
+//   function($resource){
+//     return $resource('phones/:phoneId.json', {}, {
+//       query: {method:'GET', params:{phoneId:'phones'}, isArray:true}
+//     });
+//   }]);
+
+// // function($http, $q) {
 //     	var testData = [];
 //     	var defer = $q.defer();
 //     	defer.promise
