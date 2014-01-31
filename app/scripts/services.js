@@ -1,20 +1,19 @@
 var pingpongServices = angular.module('pingpongServices', ['ngResource']);
 
 pingpongServices.factory('Data', ['$resource',
+    
+//     function($resource){
+//     	return $resource('data/dummy_data.json', {}, {
+//       	getData: {method:'GET', isArray:true }
+//     	})
+//     }
+// ]);
+
+
     function($resource){
-    	return $resource('data/dummy_data.json', {}, {
-      	query: {method:'GET', {},  isArray:true }
-    	})
+    	return $resource('data/dummy_data.json')
     }
 ]);
-
-
-// phonecatServices.factory('Phone', ['$resource',
-//   function($resource){
-//     return $resource('phones/:phoneId.json', {}, {
-//       query: {method:'GET', params:{phoneId:'phones'}, isArray:true}
-//     });
-//   }]);
 
 // // function($http, $q) {
 //     	var testData = [];
