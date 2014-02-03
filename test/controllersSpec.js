@@ -19,14 +19,14 @@ describe('pingApp controllers', function() {
  
     beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
       $httpBackend = _$httpBackend_;
-      $httpBackend.expectGET('data/dummy_data.json').
-          respond([{"p1points": 5, 
+      $httpBackend.expectGET('http://localhost:3000/api/matches').
+          respond({"p1points": 5, 
                     "p2points": 3,
                     "p1games": 0,
                     "p2games": 1,
                     "serving": 0,
                     "gameOdd": false
-                  }]);
+                  });
  
       scope = $rootScope.$new();
       ctrl = $controller('ScorerCtrl', {$scope: scope});
@@ -49,7 +49,7 @@ describe('pingApp controllers', function() {
  
     it('should set p2games on ScorerCtrl scope to 1', function() {
       $httpBackend.flush();
-      expect(scope.p2games).toBe(1);
+      expect(scope.score.p2games).toBe(1);
     });
   });
  
