@@ -1,19 +1,23 @@
 var pingpongControllers = angular.module('pingpongControllers', []);
 
 
-pingpongControllers.controller('ScorerCtrl', ['$scope', 'Data', 
-	function($scope, Data) {
+pingpongControllers.controller('ScorerCtrl', ['$scope', '$routeParams', 'Data', 
+	function($scope, $routeParams, Data) {
 
 		// console.log(Data.query());
-		console.log(Data.get());
+		// console.log(Data.get());
 
 
-		Data.get(function(data){
+		Data.get({id: 4}, function(data){
 	 		$scope.score = data;
 	 	})
 
 	 	$scope.increment = function(number){
-	 		$scope.score = Data.increment({player_id: 7});
+	 		$scope.score = Data.increment({id: 4, player_id: number});
+	 	}
+
+	 	$scope.decrement = function(number){
+	 		$scope.score = Data.decrement({id: 4, player_id: number});
 	 	}
 
 	}
