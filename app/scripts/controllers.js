@@ -13,7 +13,7 @@ pingpongControllers.controller('ScorerCtrl', ['$scope', 'Data',
 	 	})
 
 	 	$scope.increment = function(number){
-	 		alert('Increment for player ' + number);
+	 		$scope.score = Data.increment({player_id: 7});
 	 	}
 
 	}
