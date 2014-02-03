@@ -4,8 +4,12 @@ var pingpongControllers = angular.module('pingpongControllers', []);
 pingpongControllers.controller('ScorerCtrl', ['$scope', 'Data', 
 	function($scope, Data) {
 
-		Data.query(function(data){
-	 		$scope.score = data[0];
+		// console.log(Data.query());
+		console.log(Data.get());
+
+
+		Data.get(function(data){
+	 		$scope.score = data;
 	 	})
 
 	 	$scope.increment = function(number){
