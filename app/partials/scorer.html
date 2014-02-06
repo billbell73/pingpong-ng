@@ -4,12 +4,18 @@
 		    <h2 id="p1-name">
 		    	Player 1
 		    </h2>
-		    <article id="p1-points" ng-click="increment(7)">
+		    <article id="p1-points" ng-click="increment(7)" ng-cloak>
 		    	{{score.p1points}}
 		    </article>
 		    <aside id="p1-games">
 		    	{{score.p1games}}
 		    </aside>
+				<img id="p1marker" class="p1serveball" ng-show="score.currently_serving -1" src="images/serveball.svg">
+			
+
+				
+
+		   
 		    <nav class="p1-back" ng-click="decrement(7)">Back</nav>
 		  </section>
 
@@ -23,6 +29,7 @@
 		    <aside id="p2-games">
 		    	{{score.p2games}}
 		    </aside>
+		    
 		    <nav class="p2-back" ng-click="decrement(8)">Back</nav>
 		  </section>
 
