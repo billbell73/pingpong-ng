@@ -18,14 +18,41 @@ describe('E2E: Testing Scorer view', function() {
     expect(gameScore.getText()).toEqual('0');
   });
 
-  it('should increment point score', function() {
+  it('can increment a player1\'s point score', function() {
     var p1Points = element(by.binding('score.p1points'));
-    expect(p1Points.getText()).toEqual('4')
-    
-    p1Points.click()
- 		var afterClick = p1Points.getText();
- 		expect(afterClick).toEqual('5')
-    // expect(b4Click + 1).toEqual(afterClick);
+
+    p1Points.getText().then(function(scoreBefore){
+      p1Points.click();
+      p1Points.getText().then(function(scoreAfter){
+        expect(Number(scoreBefore) + 1).toEqual(Number(scoreAfter));
+      })
+    });	
+  });
+
+  it('can increment a player2\'s point score', function() {
+    var p2Points = element(by.binding('score.p2points'));
+    incrementTest(p2Points);
+  });
+
+  function incrementTest(pointsElement) {
+    pointsElement.getText().then(function(scoreBefore){
+      pointsElement.click();
+      pointsElement.getText().then(function(scoreAfter){
+        expect(Number(scoreBefore) + 1).toEqual(Number(scoreAfter));
+      })
+    }); 
+  }
+
+  it('can decrement a player\'s score', function() {
+    var p2Points = element(by.binding('score.p2points'));
+    var p2Back = element(by.className('p2-back'));
+
+    p2Points.getText().then(function(scoreBefore){
+      p2Back.click();
+      p2Points.getText().then(function(scoreAfter){
+        expect(Number(scoreBefore) - 1).toEqual(Number(scoreAfter));
+      })
+    }); 
   });
 
 });
