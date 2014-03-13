@@ -10,3 +10,7 @@ Implementation of pingpong scoring app in AngularJS. This runs on a Node server 
 * NodeJS
 * Jasmine unit tests
 * Protractor e2e tests
+
+##To do
+
+* Complete midway integration tests
