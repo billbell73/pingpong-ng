@@ -10,7 +10,7 @@
 		    <aside id="p1-games">
 		    	{{score.p1games}}
 		    </aside>
-				<serveball1></serveball1>
+				<serveball pnumber="1" ng-show="score.currently_serving-1"></serveball>
 			
 
 				
@@ -29,7 +29,7 @@
 		    <aside id="p2-games">
 		    	{{score.p2games}}
 		    </aside>
-		    <serveball2></serveball2>
+		    <serveball pnumber="2" ng-show="score.currently_serving"></serveball>
 		    <nav class="p2-back" ng-click="decrement(8)">Back</nav>
 		  </section>
 
